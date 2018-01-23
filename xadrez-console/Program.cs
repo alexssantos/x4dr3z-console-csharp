@@ -33,7 +33,11 @@ namespace xadrez_console
             Posicao pos = posicaoPeca.ConvParaPosicao();
 
             Tabuleiro tab = new Tabuleiro(8, 8);
-            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(pos.linha, pos.coluna));
+
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(7, 2));
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(2, 5));
+            tab.colocarPeca(new Rei(tab, Cor.Branca), new Posicao(4, 7));
+
             Tela.imprimirTabuleiro(tab);
 
             Console.ReadLine();
