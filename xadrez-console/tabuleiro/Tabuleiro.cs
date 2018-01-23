@@ -6,7 +6,7 @@ namespace tabuleiro
         public int linhas { get; set; }
         public int colunas { get; set; }
 
-        //matriz de peças.
+        //MATRIZ de peças.
         private Peca[,] pecas;
 
         public Tabuleiro(int linhas, int colunas)
@@ -16,5 +16,10 @@ namespace tabuleiro
             pecas = new Peca[linhas, colunas];
         }
 
+        //Metodo pra acessar a MATRIZ
+        public Peca peca(int linha, int coluna)
+        {
+            return pecas[linha, coluna];
+        }
     }
 }
