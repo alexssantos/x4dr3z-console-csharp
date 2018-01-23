@@ -21,5 +21,14 @@ namespace tabuleiro
         {
             return pecas[linha, coluna];
         }
+
+        //Colocar uma peça no tabuleiro
+        public void ColocarPeca(Peca p, Posicao pos)
+        {
+            //colocar a peça no tabuleiro com as corredenadas passadas no obj Posição.
+            pecas[pos.linha, pos.coluna] = p;
+            //Dizer à peça qual é a sua posição.
+            p.posicao = pos;
+        }
     }
 }

@@ -9,9 +9,9 @@ namespace tabuleiro
         public int qteMovimentos { get; set; }
         
         //Peça sempre criada com 1 posição, 1 tabuleiro e 1 cor.
-        public Peca (Posicao posicao, Tabuleiro tab, Cor cor)
+        public Peca (Tabuleiro tab, Cor cor)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.tabuleiro = tab;
             this.cor = cor;
             qteMovimentos = 0;

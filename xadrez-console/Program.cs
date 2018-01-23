@@ -10,7 +10,11 @@ namespace xadrez_console
 
             Tabuleiro tab = new Tabuleiro(8, 8);
 
-            Tela.imprimirTabuleiro(tab);
+            //colocar peça no tabuleiro.
+            tab.ColocarPeca(...., new Posicao(0, 0));
+            tab.ColocarPeca(....., new Posicao(0, 0));
+            tab.ColocarPeca(....., new Posicao(0, 0));
+
 
             Console.ReadLine();
 
