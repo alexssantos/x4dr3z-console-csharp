@@ -4,6 +4,7 @@ namespace xadrez
 {
     class PosicaoXadrez
     {
+        //POISIÇÃO XADREZ ex.: A1
         
         public char coluna { get; set; }
         public int linha { get; set; }
