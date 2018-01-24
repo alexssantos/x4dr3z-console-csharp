@@ -8,29 +8,32 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-
-            #region try
-            //try { 
-            //    Tabuleiro tab = new Tabuleiro(8, 8);
-
-            //    //colocar peça no tabuleiro.
-            //    tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-            //    tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-            //    tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 8));
-
-            //    Tela.imprimirTabuleiro(tab);
-            //}
-            //catch(TabuleiroException e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
-            #endregion
+                      
 
             try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
                 Tela.imprimirTabuleiro(partida.tab);
+
+
+                while (!partida.terminada)
+                {
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab);
+
+                    //pega posição de Xadrez e converte em posição matriz
+                    Console.WriteLine();
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.lerPosicaoXadrez().ConvParaPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.lerPosicaoXadrez().ConvParaPosicao();
+
+                    partida.executaMovimento(origem, destino);
+                }
+
+
+
             }
             catch(TabuleiroException e)
             {
