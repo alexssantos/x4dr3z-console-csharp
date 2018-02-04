@@ -8,7 +8,7 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-                      
+            //Terminado Parte1
 
             try
             {
